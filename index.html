@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rynoxnetwork</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+    import '@n8n/chat/style.css';
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  
+    
+    createChat({
+      webhookUrl: 'https://n8n.rynoxnetwork.store/webhook/890b7e2d-2063-4acb-95e2-db98b8dce0db/chat',
+
+    webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Hola! Soy Rynoxito 🦏',
+		'En que te puedo ayudar?'
+	],
+	i18n: {
+		en: {
+			title: 'Rynox Network',
+			 subtitle: '',
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+    });
+    </script>
+  
+  </body>
+</html>
